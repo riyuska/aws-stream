@@ -40,3 +40,4 @@ Route::group(['prefix' => 'admin', 'middleware' => ['admin.auth']], function (){
     });
 });
 
+Route::view('/', 'index');
