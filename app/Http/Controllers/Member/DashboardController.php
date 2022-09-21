@@ -10,6 +10,8 @@ class DashboardController extends Controller
 {
     public function index()
     {
+        // dd(auth()->user());
+
         $movies = Movie::orderBy('featured', 'DESC')
         ->orderBy('created_at', 'DESC')
         ->get();
