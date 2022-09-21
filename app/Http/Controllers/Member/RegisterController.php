@@ -41,7 +41,7 @@ class RegisterController extends Controller
 
         User::created($data);
 
-        return back();
-        // return redirect()->route('admin.login');
+        // return back();
+        return redirect()->route('member.login');
     }
 }
