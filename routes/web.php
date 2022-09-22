@@ -78,4 +78,5 @@ Route::group(['prefix' => 'member', 'middleware' => ['auth']], function() {
     Route::delete('subscription/{id}', [UserPremiumController::class, 'destroy'])->name('member.user_premium.destroy');
 
     Route::get('movie{id}', [MemberMovieController::class, 'show'])->name('member.movie.detail');
+    Route::get('movie{id}/watch', [MemberMovieController::class, 'watch'])->name('member.movie.watch');
 });
