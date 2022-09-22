@@ -62,7 +62,7 @@ Route::post('/login', [MemberLoginController::class, 'auth'])->name('member.logi
 Route::get('/pricing', [PricingController::class, 'index'])->name('pricing');
 // PUBLIC
 
-
+Route::view('/payment-finish', 'member.payment-finish')->name('member.payment-finish');
 
 
 
