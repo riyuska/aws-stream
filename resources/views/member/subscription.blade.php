@@ -51,12 +51,18 @@
 
         <!-- Action Button -->
         <div class="flex flex-col gap-[14px] max-w-max">
-            <a href="#!" class="py-[13px] px-[58px] bg-[#5138ED] rounded-full text-center">
-                <span class="text-white font-semibold text-base">
-                    Make a Renewal
-                </span>
-            </a>
-            <a href="#!"
+            <form method="POST" action="{{ route('member.transaction.store') }}">
+                @csrf
+                <input type="hidden" name="package_id" value="{{ $user_premium->package_id }}">
+                <button 
+                    type="submit"
+                    class="py-[13px] px-[58px] bg-[#5138ED] rounded-full text-center">
+                    <span class="text-white font-semibold text-base">
+                        Make a Renewal
+                    </span>
+                </button>
+            </form>
+            <a href="{{ route('pricing') }}"
                 class="py-[13px] px-[58px] outline outline-1 outline-stream-gray outline-offset-[-3px] rounded-full text-center">
                 <span class="text-stream-gray font-normal text-base">
                     Change Plan
