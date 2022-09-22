@@ -14,11 +14,18 @@ class UserPremiumController extends Controller
         $userPremium = UserPremium::with('package')
             ->where('user_id', $userId)
             ->first();
-            
+
         if (!$userPremium) {
             return redirect()->route('pricing');
         }
 
         return view('member.subscription', ['user_premium' => $userPremium]);
+    }
+
+    public function destroy($id)
+    {
+        UserPremium::destroy($id);
+
+        return redirect()->route('member.dashboard');
     }
 }
