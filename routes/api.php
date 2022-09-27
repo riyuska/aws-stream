@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\MovieController;
 use App\Http\Controllers\Member\WebhookController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -15,8 +17,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+// Route::post('webhook', [WebhookController::class, 'handler']);
+
+Route::post('auth', [AuthController::class, 'auth']);
+
+Route::group(['middleware' => ['jwt.verify']], function() {
+    Route::get('movies', [MovieController::class,'index']);
+    Route::get('movies/{id}', [MovieController::class,'show']);
 });
 
-Route::post('webhook', [WebhookController::class, 'handler']);

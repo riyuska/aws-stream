@@ -38,7 +38,8 @@
             <div class="watched-movies hidden">
                 <!-- Movies 1 -->
                 <div class="relative group overflow-hidden mr-[30px]">
-                    <img src="{{ asset('stream/assets/images/film-5.png') }}"
+                    <img src="{{ asset('storage/thumbnail/'.$movie->small_thumbnail) }}"
+                    {{-- <img src="{{ asset('stream/assets/images/film-5.png') }}" --}}
                         class="object-cover rounded-[30px] w-full h-[300px] w-[240px]" alt="">
                     <div
                         class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black rounded-bl-[28px] rounded-br-[28px] z-10 translate-y-0 group-hover:translate-y-[300px] transition ease-in-out duration-500 group-hover:bg-transparent overflow-hidden">
