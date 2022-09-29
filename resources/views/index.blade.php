@@ -84,7 +84,7 @@
                 START YOUR DAY
             </p>
             <div class="font-bold text-white text-4xl lg:text-[45px] text-center capitalize leading-snug">
-                Get more inspired <br class="hidden md:block" /> watching great movies
+                Alkhairunas Riyuska <br class="hidden md:block" /> watching great movies
             </div>
             <p class="text-base text-stream-gray text-center leading-7">
                 Everything you need to entertain yourself and <br class="hidden lg:block" />
