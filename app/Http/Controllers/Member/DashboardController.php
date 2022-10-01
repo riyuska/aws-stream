@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\member;
 
 use App\Http\Controllers\Controller;
-use App\Models\Movie;
 use Illuminate\Http\Request;
+use App\Models\Movie;
 
 class DashboardController extends Controller
 {
